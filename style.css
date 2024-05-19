@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('cover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Ensure the navbar is always on top */
+}
+
+.logo {
+    height: auto;
+    max-height: 50px; /* Set a maximum height for the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 80px; /* Adjust margin to fit below the navbar */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.pdf-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pdf-links a {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.pdf-links a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+@media (min-width: 600px) {
+    .pdf-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pdf-links a {
+        margin: 5px;
+        flex: 1 1 calc(20% - 10px); /* Adjust the number based on your preference */
+    }
+}
